@@ -1,0 +1,65 @@
+def add(x,y):
+    z = x+y
+    return z
+def sub(x,y):
+    z = x-y
+    return z
+def mul(x,y):
+    z = x*y
+    return z
+def div(x,y):
+    if y == 0:
+        return("ERROR")
+    else:
+        z = x/y
+        return z
+def exp(x,y):
+    z = x**y
+    return z
+def fact(x):
+    if x == 0:
+        return 1
+    else:
+        y = 1
+        z = 1
+        while x>=y:
+            z = y*z
+            y = y+1
+        return z
+def mod(x,y):
+    z = x%y
+    return z
+
+while True:
+    print("              OPERATORS               ")
+    print("     ADDITION    -       x+y          ")
+    print("   SUBTRACTION   -       x-y          ")
+    print(" MULTIPLICATION  -       x*y          ")
+    print("     DIVISION    -       x/y          ")
+    print(" EXPONENTIATION  -       x^y          ")
+    print("    MODULUS      -       x%y          ")
+    print("   FACTORIAL     -       x!           ")
+    op = input("Choose an operator(+,-,*,/,^,!,%,)")
+    if op == "!":
+        c = int(input("Enter the number - "))
+        print(c,"! = ",fact(c))
+    else:
+        a = float(input("Enter the first number - "))
+        b = float(input("Enter the second number - "))
+    if op == "+":
+        print(a,"+",b,"=",add(a,b))
+    elif op == "-":
+        print(a,"-",b,"=",sub(a,b))
+    elif op == "*":
+        print(a,"*",b,"=",mul(a,b))
+    elif op == "/":
+        print(a,"/",b,"=",div(a,b))
+    elif op == "^":
+        print(a,"^",b,"=",exp(a,b))
+    elif op == "%":
+        print(a,"%",b,"=",mod(a,b))
+    else:
+        print()
+    again = input("WANT TO CALCULATE AGAIN?(YES/NO)")
+    if again == "no" or again == "NO":
+        break
